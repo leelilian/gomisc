@@ -5,13 +5,14 @@ import (
 	"time"
 
 	"crawler/engine"
+	"crawler/framework"
 	"crawler/zhenai/parser"
 )
 
 func main() {
 
 	start := time.Now()
-	engine.Run(engine.Request{
+	engine.Run(framework.Request{
 		Url:    "http://www.zhenai.com/zhenghun",
 		Parser: parser.ParseCityList,
 	})

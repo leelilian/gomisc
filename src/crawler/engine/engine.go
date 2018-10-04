@@ -3,11 +3,12 @@ package engine
 import (
 	"log"
 
+	"crawler/framework"
 	"crawler/utils"
 )
 
-func Run(seeds ...Request) {
-	var requests []Request
+func Run(seeds ...framework.Request) {
+	var requests []framework.Request
 	for _, m := range seeds {
 		requests = append(requests, m)
 	}
