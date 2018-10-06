@@ -33,7 +33,7 @@ func Fetch(url string) ([]byte, error) {
 
 	if response.StatusCode != http.StatusOK {
 		log.Printf("url: %s, error http code: %d", url, response.StatusCode)
-		return nil, fmt.Errorf("wrong http code: %d", response.StatusCode)
+		return nil, fmt.Errorf("wrong http code: %d, %s", response.StatusCode, response.Status)
 	}
 
 	return ioutil.ReadAll(utf8reader)

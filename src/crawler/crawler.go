@@ -6,13 +6,19 @@ import (
 
 	"crawler/engine"
 	"crawler/framework"
+	"crawler/scheduler"
 	"crawler/zhenai/parser"
 )
 
 func main() {
 
 	start := time.Now()
-	engine.Run(framework.Request{
+	eng := &engine.ConcurrentEngine{
+		Scheduler:   &scheduler.ConcurrentScheduler{},
+		WorkerCount: 10,
+	}
+
+	eng.Run(framework.Request{
 		Url:    "http://www.zhenai.com/zhenghun",
 		Parser: parser.ParseCityList,
 	})
