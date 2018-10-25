@@ -3,9 +3,9 @@ package engine
 import (
 	"log"
 
+	"crawler/consumer"
 	"crawler/framework"
 	"crawler/scheduler"
-	"crawler/worker"
 )
 
 type SimpleEngine struct {
@@ -20,7 +20,8 @@ func (this *SimpleEngine) Run(seeds ...framework.Request) {
 	}
 	for {
 		request := this.Scheduler.Dispatch()
-		result, err := worker.Handle(request)
+		w := consumer.Worker{}
+		result, err := w.Handle(request)
 		if err != nil {
 			continue
 		}

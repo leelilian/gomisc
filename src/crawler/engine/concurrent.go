@@ -3,9 +3,9 @@ package engine
 import (
 	"log"
 
+	"crawler/consumer"
 	"crawler/framework"
 	"crawler/scheduler"
-	"crawler/worker"
 )
 
 type ConcurrentEngine struct {
@@ -13,25 +13,26 @@ type ConcurrentEngine struct {
 	WorkerCount int
 }
 
-func (ce ConcurrentEngine) Run(seeds ...framework.Request) {
+func (ce *ConcurrentEngine) Run(seeds ...framework.Request) {
+
+	out := make(chan *framework.ParseResult)
+	ce.Scheduler.Run()
+
+	for i := 0; i < ce.WorkerCount; i++ {
+		in := ce.Scheduler.DetermineRequestChannel()
+		w := consumer.Worker{Request: in}
+		w.HandleAsync(out, ce.Scheduler)
+	}
 
 	for _, request := range seeds {
 		ce.Scheduler.Submit(request)
 	}
 
-	in := make(chan framework.Request)
-	out := make(chan *framework.ParseResult)
-	ce.Scheduler.SetRequestChannel(in)
-
-	for i := 0; i < ce.WorkerCount; i++ {
-		worker.HandleAsync(in, out)
-	}
-
 	for {
 
 		result := <-out
-		for _, m := range result.Items {
-			log.Printf("item: %v", m)
+		for _, item := range result.Items {
+			log.Printf("item: %v", item)
 
 		}
 		for _, request := range result.RequestList {

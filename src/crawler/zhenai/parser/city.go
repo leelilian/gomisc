@@ -8,6 +8,7 @@ import (
 )
 
 var cityReg = regexp.MustCompile(`<a href="(http://album.zhenai.com/u/[0-9]+)"[^>]*>([^<]+)</a>`)
+var more = regexp.MustCompile(`<a href="(http://www.zhenai.com/zhenghun/[0-9a-z]+/[1-9]+)"[^>]*>([^<]+)</a>`)
 
 func ParseCity(contents []byte) *framework.ParseResult {
 
@@ -25,5 +26,18 @@ func ParseCity(contents []byte) *framework.ParseResult {
 			},
 		})
 	}
+
+	moreUser := more.FindAllSubmatch(contents, -1)
+	for _, u := range moreUser {
+		log.Printf("city: %s, url: %s,", string(u[2]), string(u[1]))
+		city := string(u[2])
+		result.Items = append(result.Items, city)
+		result.RequestList = append(result.RequestList,
+			framework.Request{
+				Url:    string(u[1]),
+				Parser: ParseCity,
+			})
+	}
+
 	return result
 }

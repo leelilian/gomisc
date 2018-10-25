@@ -1,11 +1,15 @@
 package scheduler
 
 import (
+	"crawler/consumer"
 	"crawler/framework"
 )
 
 type AsyncScheduler interface {
+	consumer.WorkerReadyNotifier
 	Submit(request framework.Request)
 
-	SetRequestChannel(request chan framework.Request)
+	DetermineRequestChannel() chan framework.Request
+
+	Run()
 }

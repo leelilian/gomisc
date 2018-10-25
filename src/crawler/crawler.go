@@ -14,7 +14,7 @@ func main() {
 
 	start := time.Now()
 	eng := &engine.ConcurrentEngine{
-		Scheduler:   &scheduler.ConcurrentScheduler{},
+		Scheduler:   &scheduler.QueueScheduler{},
 		WorkerCount: 10,
 	}
 
