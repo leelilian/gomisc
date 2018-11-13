@@ -1,36 +1,38 @@
 package main
 
-import (
-	"fmt"
-)
-
 type LogProcessor struct {
 	Reader    CustomReader
 	Processor CustomProcessor
+	Writer    CustomWriter
 }
 
 func main() {
 
 	var reader CustomReader
 
-	ch := make(chan []byte)
+	ch := make(chan []byte, 64)
 	reader = &CustomFileReader{Path: "", ReadChannel: ch}
 
 	var pro CustomProcessor
-	out := make(chan []byte)
+	out := make(chan []byte, 4096)
 	pro = &CustomFileProcessor{InputChannel: ch, OutputChannel: out}
 
-	for j := 0; j < 5; j++ {
-		go reader.Read()
+	var w CustomWriter
+
+	w = &CustomFileWriter{WriteChannel: out, Path: "result.txt"}
+
+	processor := &LogProcessor{Reader: reader, Writer: w, Processor: pro}
+
+	for j := 0; j < 10; j++ {
+		go processor.Reader.Read()
 	}
 
 	for i := 0; i < 10; i++ {
-		go pro.Process()
+		go processor.Processor.Process()
 	}
 
-	for {
+	go processor.Writer.Write()
 
-		fmt.Printf("received:%s\n", <-out)
-	}
+	select {}
 
 }

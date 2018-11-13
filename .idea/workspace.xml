@@ -2,31 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e9ede09-616e-49c4-b59b-bee7962023cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/crawler/consumer/workerqueue.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawler/framework/requestqueue.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawler/notifier/workerreadynotifier.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/crawler/scheduler/queuescheduler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/channelsimple.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/client.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/helloworld/helloworld.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/helloworldclient.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/helloworldserver.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/logprocessor/logreader.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/logprocessor/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/logprocessor/processor.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/protobuf.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/protobuffer.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/misc/select.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/go.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/go.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/channelfun.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/logprocessor/writer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/misc/pointertest.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/crawler.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/crawler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/engine/concurrent.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/engine/concurrent.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/engine/simple.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/engine/simple.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/scheduler/asyncscheduler.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/scheduler/asyncscheduler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/scheduler/concurrentscheduler.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/scheduler/concurrentscheduler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/worker/worker.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/consumer/worker.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/zhenai/parser/city.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/zhenai/parser/city.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/crawler/zhenai/parser/citylist.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/crawler/zhenai/parser/citylist.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/helloworld/helloworld.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/helloworld/helloworld.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/helloworldserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/helloworldserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/logprocessor/logreader.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/logprocessor/reader.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc/logprocessor/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc/logprocessor/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,119 +35,65 @@
     <session id="1810024672">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
+          <entry key="project.closed" value="33" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.11" value="6" />
+          <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.open.time.9" value="5" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.open.time.9" value="6" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="148" />
+          <entry key="go" value="156" />
           <entry key="iml" value="1" />
-          <entry key="proto" value="2" />
+          <entry key="proto" value="5" />
           <entry key="sh" value="5" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="4" />
-          <entry key="Go" value="147" />
+          <entry key="Go" value="155" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="PROTO" value="1" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PROTO" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="10188" />
-          <entry key="proto" value="43" />
+          <entry key="go" value="11171" />
+          <entry key="proto" value="44" />
           <entry key="sh" value="69" />
-          <entry key="txt" value="69" />
+          <entry key="txt" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="65" />
-          <entry key="Go" value="10181" />
-          <entry key="PLAIN_TEXT" value="80" />
-          <entry key="PROTO" value="43" />
+          <entry key="Go" value="11164" />
+          <entry key="PLAIN_TEXT" value="97" />
+          <entry key="PROTO" value="44" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-              <folding>
-                <element signature="e#14#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/processor.go">
+        <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="24" />
-              <folding>
-                <element signature="e#14#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/logreader.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-              <folding>
-                <element signature="e#14#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/crawler/crawler.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/helloworldclient.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/http.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="493">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -172,38 +101,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.pb.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="18" />
-              <folding>
-                <element signature="e#98#241#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.pb.go">
+        <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="79" column="34" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="34" />
+            <state relative-caret-position="272">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/misc/helloworldserver.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/protobuffer.sh">
+        <entry file="file://$PROJECT_DIR$/src/misc/helloworldclient.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/misc/client.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="221">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -213,8 +139,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -237,9 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/human/person.go" />
-        <option value="$PROJECT_DIR$/src/misc/redisgo.go" />
-        <option value="$PROJECT_DIR$/src/crawler/entity/parseresult.go" />
         <option value="$PROJECT_DIR$/src/crawler/entity/request.go" />
         <option value="$PROJECT_DIR$/src/crawler/engine/parseresult.go" />
         <option value="$PROJECT_DIR$/src/crawler/engine/request.go" />
@@ -274,11 +197,9 @@
         <option value="$PROJECT_DIR$/src/misc/protobuffer/protobuf.go" />
         <option value="$PROJECT_DIR$/src/misc/protobuffer/test.proto" />
         <option value="$PROJECT_DIR$/src/misc/protobuf.go" />
-        <option value="$PROJECT_DIR$/src/misc/helloworld/helloworld.proto" />
         <option value="$PROJECT_DIR$/src/misc/helloworld/client.go" />
         <option value="$PROJECT_DIR$/src/misc/helloworld/server.go" />
         <option value="$PROJECT_DIR$/src/misc/server.go" />
-        <option value="$PROJECT_DIR$/src/misc/helloworldserver.go" />
         <option value="$PROJECT_DIR$/src/misc/helloworldclient.go" />
         <option value="$PROJECT_DIR$/src/misc/protobuffer.sh" />
         <option value="$PROJECT_DIR$/src/misc/client.sh" />
@@ -288,6 +209,11 @@
         <option value="$PROJECT_DIR$/src/misc/logprocessor/logreader.go" />
         <option value="$PROJECT_DIR$/src/misc/logprocessor/processor.go" />
         <option value="$PROJECT_DIR$/src/misc/logprocessor/main.go" />
+        <option value="$PROJECT_DIR$/src/misc/channelfun.go" />
+        <option value="$PROJECT_DIR$/src/misc/logprocessor/writer.go" />
+        <option value="$PROJECT_DIR$/src/misc/pointertest.go" />
+        <option value="$PROJECT_DIR$/src/misc/helloworld/helloworld.proto" />
+        <option value="$PROJECT_DIR$/src/misc/helloworldserver.go" />
       </list>
     </option>
   </component>
@@ -337,6 +263,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -348,24 +275,7 @@
             <path>
               <item name="go" type="b2602c69:ProjectViewProjectNode" />
               <item name="go" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go" type="462c0819:PsiDirectoryNode" />
-              <item name="pkg" type="462c0819:PsiDirectoryNode" />
-              <item name="darwin_amd64" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go" type="b2602c69:ProjectViewProjectNode" />
@@ -378,7 +288,7 @@
               <item name="go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="misc" type="462c0819:PsiDirectoryNode" />
-              <item name="logprocessor" type="462c0819:PsiDirectoryNode" />
+              <item name="helloworld" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="go" type="b2602c69:ProjectViewProjectNode" />
@@ -387,28 +297,18 @@
               <item name="misc" type="462c0819:PsiDirectoryNode" />
               <item name="protobuffer" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="go" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.11.1" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
     <property name="GO_FMT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540478516475" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541844193055" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
@@ -442,40 +342,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build misc/logprocessor">
-    <configuration name="go build channelsimple.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build atomic.go">
+    <configuration name="go build atomic.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/misc/channelsimple.go" />
+      <filePath value="$PROJECT_DIR$/src/misc/atomic.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build crawler.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build channelfun.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/crawler/crawler.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build logprocessor.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/misc/logprocessor/logprocessor.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/src/misc/logprocessor/main.go" />
+      <filePath value="$PROJECT_DIR$/src/misc/channelfun.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -489,20 +371,38 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build pointertest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/misc/pointertest.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build protobuf.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/src/misc/protobuf.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Go Build.go build channelsimple.go" />
-      <item itemvalue="Go Build.go build logprocessor.go" />
-      <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Build.go build misc/logprocessor" />
-      <item itemvalue="Go Build.go build crawler.go" />
+      <item itemvalue="Go Build.go build channelfun.go" />
+      <item itemvalue="Go Build.go build pointertest.go" />
+      <item itemvalue="Go Build.go build protobuf.go" />
+      <item itemvalue="Go Build.go build atomic.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build atomic.go" />
+        <item itemvalue="Go Build.go build protobuf.go" />
+        <item itemvalue="Go Build.go build pointertest.go" />
+        <item itemvalue="Go Build.go build channelfun.go" />
         <item itemvalue="Go Build.go build misc/logprocessor" />
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build crawler.go" />
-        <item itemvalue="Go Build.go build logprocessor.go" />
-        <item itemvalue="Go Build.go build channelsimple.go" />
       </list>
     </recent_temporary>
   </component>
@@ -545,7 +445,11 @@
       <workItem from="1539876007542" duration="505000" />
       <workItem from="1540389542227" duration="350000" />
       <workItem from="1540390593763" duration="4493000" />
-      <workItem from="1540473719637" duration="4625000" />
+      <workItem from="1540473719637" duration="8410000" />
+      <workItem from="1540562682396" duration="1196000" />
+      <workItem from="1540730102047" duration="3272000" />
+      <workItem from="1541826044636" duration="1566000" />
+      <workItem from="1542036811409" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="city resolver update">
       <created>1538576616264</created>
@@ -568,11 +472,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538825480510</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add log processor">
+      <created>1540478597490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540478597490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78246000" />
+    <option name="totallyTimeSpent" value="88663000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -585,9 +496,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25107297" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2653791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -595,15 +505,15 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.29171973" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49570817" weight="0.22292994" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32866243" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49570817" weight="0.2878981" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50429183" side_tool="true" weight="0.42675158" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50429183" side_tool="true" weight="0.22292994" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="REST Client" order="12" weight="0.5910828" />
@@ -631,7 +541,8 @@
     <MESSAGE value="city resolver update" />
     <MESSAGE value="structure change" />
     <MESSAGE value="structure change&#10;concurrent one" />
-    <option name="LAST_COMMIT_MESSAGE" value="structure change&#10;concurrent one" />
+    <MESSAGE value="Add log processor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add log processor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -667,41 +578,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/misc/structcopy.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/sublime.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/rpcserver.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/humanimpl.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/atomic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/human/Errors.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -885,34 +761,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/test.txt" />
     <entry file="file://$USER_HOME$/go/src/google.golang.org/grpc/examples/helloworld/helloworld/helloworld.pb.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/protobuf.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -930,17 +783,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/helloworldserver.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/helloworldclient.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/processor.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="136">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/writer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/reader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/channelfun.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt" />
+    <entry file="file://$PROJECT_DIR$/src/misc/pointertest.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/atomic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/crawler/crawler.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -951,20 +847,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.pb.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.pb.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="18" />
-          <folding>
-            <element signature="e#98#241#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="690">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.pb.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/protobuf.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="79" column="34" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="34" />
+        <state relative-caret-position="391">
+          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -982,40 +875,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/crawler/crawler.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/protobuffer/test.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="493">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/logreader.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.pb.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#14#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/processor.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/helloworld/helloworld.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#14#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/misc/logprocessor/main.go">
+    <entry file="file://$PROJECT_DIR$/src/misc/helloworldclient.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="e#14#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/misc/helloworldserver.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
