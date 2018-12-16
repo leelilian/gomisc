@@ -1,0 +1,51 @@
+syntax = "proto3";
+package entity;
+
+message Order {
+    string OrderNo = 1;
+    repeated Item Items = 2;
+    Address ShipToAddress = 3;
+    Address BillToAddress = 4;
+    Contact ShipToContact = 5;
+    Contact BillToContact = 6;
+}
+
+message Address {
+    string Country = 1;
+    string Province = 2;
+    string City = 3;
+    string Street1 = 4;
+    string Street2 = 5;
+    string PostCode = 6;
+}
+
+message Contact {
+    string FirstName = 1;
+    string LastName = 2;
+    string Phone = 3;
+}
+
+message Item {
+    string ItemNo = 1;
+    string ItemName = 2;
+    double Price = 3;
+    int32 Quantity = 4;
+}
+
+message OrderListResponse {
+    int64 Code = 1;
+    string Message = 2;
+    repeated Order OrderList = 3;
+}
+
+message OrderQueryRequest {
+    string OrderNo = 1;
+    string ShipToContact = 2;
+    string BillToContact = 3;
+}
+
+service OrderService {
+    rpc GetOrders (OrderQueryRequest) returns (OrderListResponse);
+    rpc GetOrdersByStream (stream OrderQueryRequest) returns (stream OrderListResponse);
+    rpc GetStreamResponseOrders (OrderQueryRequest) returns (stream OrderListResponse);
+}

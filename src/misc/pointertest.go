@@ -14,7 +14,7 @@ func (p *field) print() {
 }
 
 func main() {
-	data := []field{{"one"}, {"two"}, {"three"}}
+	data := []*field{{"one"}, {"two"}, {"three"}}
 	for _, v := range data {
 		fmt.Printf("%p\n", &v)
 		go v.print()
