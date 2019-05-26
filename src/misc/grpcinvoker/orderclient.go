@@ -1,10 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"context"
 	"encoding/json"
 	"fmt"
 	"io"
+	"os"
 	"time"
 
 	"github.com/gpmgo/gopm/modules/log"
@@ -15,7 +17,7 @@ import (
 func main() {
 	conn, err := grpc.Dial(":12345", grpc.WithInsecure())
 	if err != nil {
-		log.Fatal("dail error:\n ", err)
+		log.Fatal(" error:\n ", err)
 	}
 	defer conn.Close()
 
@@ -68,7 +70,7 @@ func main() {
 		}()
 	*/
 
-	c, err := client.GetStreamResponseOrders(ctx, &entity.OrderQueryRequest{OrderNo: "1"})
+	c, err := client.GetStreamResponseOrders(ctx, &entity.OrderQueryRequest{OrderNo: "1,2,3,4,5,6"})
 	if err != nil {
 		log.Fatal("c error:%v", err)
 	}
@@ -86,7 +88,29 @@ func main() {
 		printJson(rsp)
 	}
 
-	select {}
+	/*
+		stream, err := client.GetOrdersByClientStream(ctx)
+		if err != nil {
+			panic(err)
+		}
+		for i := 0; i < 5; i++ {
+			err = stream.Send(
+				&entity.OrderQueryRequest{
+					OrderNo: strconv.Itoa(i),
+				})
+			if err != nil {
+				panic(err)
+			}
+		}
+
+		rsp, err := stream.CloseAndRecv()
+		fmt.Println(rsp)
+		if err != nil {
+			panic(err)
+		}
+		printJson(rsp)
+	*/
+	// select {}
 
 }
 
@@ -97,4 +121,8 @@ func printJson(data *entity.OrderListResponse) {
 		return
 	}
 	fmt.Printf("time:%s, %s\n", time.Now(), txt)
+	file, err := os.OpenFile("txt.txt", os.O_CREATE|os.O_RDWR, 0666)
+	w := bufio.NewWriter(file)
+	w.WriteString((string)(txt))
+	w.Flush()
 }

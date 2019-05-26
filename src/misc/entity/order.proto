@@ -33,7 +33,7 @@ message Item {
 }
 
 message OrderListResponse {
-    int64 Code = 1;
+    int64 ResultCode = 1;
     string Message = 2;
     repeated Order OrderList = 3;
 }
@@ -48,4 +48,6 @@ service OrderService {
     rpc GetOrders (OrderQueryRequest) returns (OrderListResponse);
     rpc GetOrdersByStream (stream OrderQueryRequest) returns (stream OrderListResponse);
     rpc GetStreamResponseOrders (OrderQueryRequest) returns (stream OrderListResponse);
+    rpc GetOrdersByClientStream (stream OrderQueryRequest) returns (OrderListResponse);
 }
+

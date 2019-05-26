@@ -39,11 +39,11 @@ func findOrderByNo(orderNo string) *entity.OrderListResponse {
 		OrderList: list,
 	}
 	if len(list) > 0 {
-		rsp.Code = 0
+		rsp.ResultCode = 200
 		rsp.Message = "OK"
 
 	} else {
-		rsp.Code = 404
+		rsp.ResultCode = 404
 		rsp.Message = "NOT FOUND"
 	}
 	return &rsp
@@ -76,8 +76,10 @@ func (server *orderserver) GetStreamResponseOrders(req *entity.OrderQueryRequest
 	if req == nil {
 		return fmt.Errorf("request is empty")
 	}
-	for k := 0; k < 100; k++ {
-		rsp := findOrderByNo(req.OrderNo)
+
+	list := strings.Split(req.OrderNo, ",")
+	for _, no := range list {
+		rsp := findOrderByNo(no)
 		err := stream.Send(rsp)
 		if err != nil {
 			return err
@@ -86,16 +88,49 @@ func (server *orderserver) GetStreamResponseOrders(req *entity.OrderQueryRequest
 	return nil
 }
 
-func genereate() {
+func (server *orderserver) GetOrdersByClientStream(stream entity.OrderService_GetOrdersByClientStreamServer) error {
+
+	var rsplist []*entity.Order
+	var response entity.OrderListResponse
+	for {
+		req, err := stream.Recv()
+		if err != nil {
+			if err == io.EOF {
+
+				response.OrderList = rsplist
+				if len(rsplist) > 0 {
+					response.ResultCode = 200
+					response.Message = "OK"
+				} else {
+					response.ResultCode = 404
+					response.Message = "NOT FOUND"
+				}
+				//  fmt.Println(response)
+				err = stream.SendAndClose(&response)
+				return err
+
+			}
+
+			return err
+		}
+		rsp := findOrderByNo(req.OrderNo)
+		rsplist = append(rsplist, rsp.OrderList...)
+
+	}
+	return nil
+
+}
+
+func generate() {
 	if len(orders) == 0 {
 
 		items := []*entity.Item{
-			&entity.Item{ItemNo: "itemno1", ItemName: "itemname1", Price: 1.23},
-			&entity.Item{ItemNo: "itemno2", ItemName: "itemname2", Price: 1.24},
-			&entity.Item{ItemNo: "itemno3", ItemName: "itemname3", Price: 1.25},
-			&entity.Item{ItemNo: "itemno4", ItemName: "itemname4", Price: 1.26},
-			&entity.Item{ItemNo: "itemno5", ItemName: "itemname5", Price: 1.27},
-			&entity.Item{ItemNo: "itemno6", ItemName: "itemname6", Price: 1.28},
+			{ItemNo: "itemno1", ItemName: "itemname1", Price: 1.23},
+			{ItemNo: "itemno2", ItemName: "itemname2", Price: 1.24},
+			{ItemNo: "itemno3", ItemName: "itemname3", Price: 1.25},
+			{ItemNo: "itemno4", ItemName: "itemname4", Price: 1.26},
+			{ItemNo: "itemno5", ItemName: "itemname5", Price: 1.27},
+			{ItemNo: "itemno6", ItemName: "itemname6", Price: 1.28},
 		}
 
 		address := entity.Address{
@@ -133,7 +168,7 @@ func genereate() {
 var orders []*entity.Order
 
 func init() {
-	genereate()
+	generate()
 }
 
 func main() {
