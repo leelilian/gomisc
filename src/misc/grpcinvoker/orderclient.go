@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 	"time"
-
+	
 	"github.com/gpmgo/gopm/modules/log"
 	"google.golang.org/grpc"
 	"misc/entity"
@@ -20,9 +20,9 @@ func main() {
 		log.Fatal(" error:\n ", err)
 	}
 	defer conn.Close()
-
+	
 	client := entity.NewOrderServiceClient(conn)
-
+	
 	ctx := context.Background()
 	/*
 		rsp, err := client.GetOrders(ctx, &entity.OrderQueryRequest{OrderNo: "1"})
@@ -69,7 +69,7 @@ func main() {
 			}
 		}()
 	*/
-
+	
 	c, err := client.GetStreamResponseOrders(ctx, &entity.OrderQueryRequest{OrderNo: "1,2,3,4,5,6"})
 	if err != nil {
 		log.Fatal("c error:%v", err)
@@ -87,7 +87,7 @@ func main() {
 		fmt.Println(count)
 		printJson(rsp)
 	}
-
+	
 	/*
 		stream, err := client.GetOrdersByClientStream(ctx)
 		if err != nil {
@@ -111,7 +111,7 @@ func main() {
 		printJson(rsp)
 	*/
 	// select {}
-
+	
 }
 
 func printJson(data *entity.OrderListResponse) {

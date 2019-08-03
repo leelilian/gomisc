@@ -13,7 +13,7 @@ type Stock struct {
 
 func (stock *Stock) Add(observer Observer) {
 	stock.observers = append(stock.observers, observer)
-
+	
 }
 
 func (stock *Stock) Remove(observer Observer) {

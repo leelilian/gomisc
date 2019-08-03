@@ -1,0 +1,6 @@
+FROM centos:latest
+LABEL cjl="cjl"
+WORKDIR /data
+ADD ./main ./main
+EXPOSE 8080
+ENTRYPOINT ["./main"]
